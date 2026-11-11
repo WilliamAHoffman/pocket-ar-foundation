@@ -1,18 +1,25 @@
+# Creators Note
+
+This project was created as an early equivalent for ARFoundations. It uses PocketAR to get platforms.
+This project also supports simulations on desktop. This project was created by William Hoffman with the help of AI Tools.
+
 # PocketAR backend architecture test
 
 This project separates the AR application from the platform-specific implementation that supplies tracking and surface queries.
 
 ## Architecture
 
-- `scripts/ar_backend.gd` — common backend contract.
-- `scripts/plane_data.gd` — common, typed plane description.
-- `scripts/ar_hit.gd` — common, typed screen-raycast result.
-- `scripts/desktop_ar_backend.gd` — desktop implementation using physics rays against the simulated room.
-- `scripts/mobile_ar_backend.gd` — adapter around PocketAR's `ARView` facade for ARCore/ARKit.
-- `scripts/placement_manager.gd` — shared object placement.
-- `scripts/simulator.gd` — desktop room and interaction layer; it depends on `ARBackend`, not the concrete backend type.
-- `main.gd` — mobile UI, delegating AR work to `MobileARBackend`.
-- `scripts/platform_bootstrap.gd` — selects the desktop or mobile scene.
+- `scripts/shared/ar_backend.gd` - common backend contract.
+- `scripts/shared/plane_data.gd` - common, typed plane description.
+- `scripts/shared/ar_hit.gd` - common, typed screen-raycast result.
+- `scripts/shared/placement_manager.gd` - shared object placement.
+- `scripts/shared/platform_bootstrap.gd` - selects the desktop or mobile scene.
+
+- `scripts/desktop/desktop_ar_backend.gd` - desktop implementation using physics rays against the simulated room.
+- `scripts/desktop/desktop_main.gd` - desktop room and interaction layer; it depends on `ARBackend`, not the concrete backend type.
+
+- `scripts/mobile/mobile_main.gd` - mobile UI, delegating AR work to `MobileARBackend`.
+- `scripts/mobile/mobile_ar_backend.gd` - adapter around PocketAR's `ARView` facade for ARCore/ARKit.
 
 Both implementations expose `PlaneData` and `ARHit`. The application should use the interface methods and signals rather than reaching into backend-specific nodes.
 
