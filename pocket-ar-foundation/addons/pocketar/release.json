@@ -1,0 +1,83 @@
+{
+  "version": "0.0.2",
+  "revision": "e572a7bcc18782b61c79784294655b0eebcf9e30",
+  "dirty": false,
+  "godot_cpp": "b051e694cf493d417f5aa945c656cb77ae9011a9",
+  "godot_minimum": "4.7.2",
+  "arcore": "1.56.0",
+  "nix_inputs": {
+    "nodes": {
+      "devenv": {
+        "locked": {
+          "dir": "src/modules",
+          "lastModified": 1791549372,
+          "narHash": "sha256-5Vu2oKeImB5wQWLFSEcWXsF0Oajm4/5MV7UlnOdelmg=",
+          "owner": "cachix",
+          "repo": "devenv",
+          "rev": "a73c5b84c9527760f009232988466763068f9f61",
+          "type": "github"
+        },
+        "original": {
+          "dir": "src/modules",
+          "owner": "cachix",
+          "repo": "devenv",
+          "type": "github"
+        }
+      },
+      "nixpkgs": {
+        "inputs": {
+          "nixpkgs-src": "nixpkgs-src"
+        },
+        "locked": {
+          "lastModified": 1789506231,
+          "narHash": "sha256-vNkJbtmqyBfFhn/HnzQo4ROuoyYWuy/allqTfJb4kMY=",
+          "owner": "cachix",
+          "repo": "devenv-nixpkgs",
+          "rev": "c2f38fe7f9e04d9aadd354d380f2bd40531d9737",
+          "type": "github"
+        },
+        "original": {
+          "owner": "cachix",
+          "ref": "rolling",
+          "repo": "devenv-nixpkgs",
+          "type": "github"
+        }
+      },
+      "nixpkgs-src": {
+        "flake": false,
+        "locked": {
+          "lastModified": 1789370336,
+          "narHash": "sha256-6RSEDHIWQtesQKWSu5qRai8L2h4KgCgMEfJHstW99G4=",
+          "owner": "NixOS",
+          "repo": "nixpkgs",
+          "rev": "c7def046b9a883d46974757852106483d741586f",
+          "type": "github"
+        },
+        "original": {
+          "owner": "NixOS",
+          "ref": "nixpkgs-unstable",
+          "repo": "nixpkgs",
+          "type": "github"
+        }
+      },
+      "root": {
+        "inputs": {
+          "devenv": "devenv",
+          "nixpkgs": "nixpkgs"
+        }
+      }
+    },
+    "root": "root",
+    "version": 7
+  },
+  "build_input_sha256": {
+    "devenv.lock": "d50c31fe61fc35f4b44f77af4ea6eb28fc1cb3252209184f1c49b71a497f8f7b",
+    "devenv.nix": "ae8a05a1c5e83bde62d49af795b1d0c529b9b8414855db1c3331b71d24258034",
+    "nix/godot-bin.nix": "4665fcf2a51e0ff7a3c4109416786910b1a6b87cd8df5cc198dbeb38175c3567",
+    "nix/godot-pocketar.nix": "bcae52014ae8e8b36db2e8905d66c99630a3b953993b29a1a51e93c90648fc66",
+    "nix/godot.sh": "28204e26eaf4b06dbf88c5f793dc6d988786ea638357236d599903a2282de4b4",
+    "android/build.gradle.kts": "50c9ca6ded6f38d82ce09723cb7bbe681bde4c29eb8d02d966d860eb2f867ef4",
+    "android/plugin/build.gradle.kts": "ad3cc2699bbdaceebb4deabc0beacf60eb19fe2426819f18024159c74fd266d9",
+    "SConstruct": "034f680df1e851b51a8021e7cb9c528a38902ec779cf876e0bf3c257017f6136"
+  }
+}

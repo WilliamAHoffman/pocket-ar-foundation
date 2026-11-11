@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c5bmqnkt6mys4"]
+
+[ext_resource type="Script" uid="uid://d2imkse8vnd2c" path="res://scripts/desktop/desktop_main.gd" id="1_512hb"]
+
+[node name="ARSimulator" type="Node3D" unique_id=713780258]
+script = ExtResource("1_512hb")

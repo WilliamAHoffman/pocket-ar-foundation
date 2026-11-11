@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cftjkitgawonr"]
+
+[ext_resource type="Script" uid="uid://ts51q8b5q6x8" path="res://scripts/mobile/mobile_main.gd" id="1_s18pi"]
+
+[sub_resource type="Theme" id="Theme"]
+default_font_size = 22
+
+[node name="TapToPlace" type="Control" unique_id=2001251536]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_s18pi")
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=954458784]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+grow_horizontal = 2
+theme = SubResource("Theme")
+
+[node name="Controls" type="VBoxContainer" parent="Panel" unique_id=659387226]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Status" type="Label" parent="Panel/Controls" unique_id=616262918]
+layout_mode = 2
+text = "Tap to place
+Start AR to enable the camera and find planes."
+autowrap_mode = 2
+
+[node name="Buttons" type="HBoxContainer" parent="Panel/Controls" unique_id=131629729]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Start" type="Button" parent="Panel/Controls/Buttons" unique_id=1478878748]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+text = "Start AR"
+
+[node name="Reset" type="Button" parent="Panel/Controls/Buttons" unique_id=989414595]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+disabled = true
+text = "Reset AR"
+
+[node name="Planes" type="CheckButton" parent="Panel/Controls" unique_id=1264693992]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+disabled = true
+button_pressed = true
+text = "Show planes"
